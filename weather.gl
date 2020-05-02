@@ -1,0 +1,8 @@
+print("Hi from GreenLight!");
+
+val location = input("Location? ");
+
+
+val weather = JSON>>parse(httpGet("https://api.openweathermap.org/data/2.5/weather?lang=de&q=" + encodeURIComponent(location) + ",de&appid=fd6ed0fcf0dc063c09e9ba57b0eef174"));
+
+print("Weather in " + location + ": " + weather>>weather[0]>>main + " (" + weather>>weather[0]>>description + ")");

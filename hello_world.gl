@@ -1,12 +1,1 @@
-print("Hi from GreenLight!");
-val name = input("What is your name? ");
-
-val nameChars = strToArray(name);
-
-if(name == "PrivateGER") {
-    print("Hi, Private.");
-} else {
-    print("Hi, " + name);
-}
-
-print("Length of name: " + nameChars>>length + "\nLast character: " + nameChars[nameChars>>length-1]);
+print("Hello world!");
