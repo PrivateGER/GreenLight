@@ -18,15 +18,15 @@ if(process.argv[2] != null) {
 	process.exit(1);
 }
 
-console.log(colors.green + "⚫ GreenLight v0.0.0" + colors.reset)
+console.log(colors.green + "⬤ GreenLight v0.0.1" + colors.reset)
 
 let lexerResults = lexer.execute(code)
 
-console.log(lexerResults);
+//console.log(lexerResults);
 
 lexerResults.forEach(token => {
 	transpiler.transpile(token);
 })
 
-console.log(transpiler.getCode());
+//console.log(transpiler.getCode());
 eval(transpiler.getCode());
