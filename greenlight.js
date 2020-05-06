@@ -1,9 +1,9 @@
-let colors = require("./lib/colors");
+let colors = require(__dirname + "/lib/colors");
 console.log(colors.green + "⬤ GreenLight v0.0.1" + colors.reset)
 
 let fs = require("fs");
-let lexer = require("./lib/lexer");
-let transpiler = require("./lib/transpiler");
+let lexer = require(__dirname + "/lib/lexer");
+let transpiler = require(__dirname + "/lib/transpiler");
 
 let code = "";
 
@@ -25,16 +25,20 @@ if(process.argv[3] != null) {
 	process.exit(1);
 }
 
+console.log(colors.blue + "[*] Executing lexer..." + colors.reset);
 let lexerResults = lexer.execute(code)
+console.log(colors.green + "[OK] Lexer finished successfully!" + colors.reset);
 
 //console.log(lexerResults);
 
+console.log(colors.blue + "[*] Transpiling..." + colors.reset);
 lexerResults.forEach(token => {
 	transpiler.transpile(token);
 })
+console.log(colors.green + "[OK] Transpilation complete!" + colors.reset);
 
 if(process.argv[2] === "c") {
-	console.log(transpiler.getCode());
+	console.log("Transpiled JS Code (includes stdlib): " + transpiler.getCode());
 } else {
 	eval(transpiler.getCode());
 }
