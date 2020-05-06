@@ -1,8 +1,11 @@
 print("Hi from GreenLight!");
 
-val location = input("Location? ");
+fun get_weather(location) {
+	var response = httpGet("https://api.openweathermap.org/data/2.5/weather?lang=de&q=" + encodeURIComponent(location) + ",de&appid=fd6ed0fcf0dc063c09e9ba57b0eef174");
 
+	var weather = JSON>>parse( response );
+	
+	print("Weather in " + location + ": " + weather>>weather[0]>>main + " (" + weather>>weather[0]>>description + ")");
+}
 
-val weather = JSON>>parse(httpGet("https://api.openweathermap.org/data/2.5/weather?lang=de&q=" + encodeURIComponent(location) + ",de&appid=fd6ed0fcf0dc063c09e9ba57b0eef174"));
-
-print("Weather in " + location + ": " + weather>>weather[0]>>main + " (" + weather>>weather[0]>>description + ")");
+call get_weather(input("Location? "));
