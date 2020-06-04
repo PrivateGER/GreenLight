@@ -1,1 +1,2 @@
 print("Hello world!");
+logError("I'm an error.");
