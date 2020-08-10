@@ -37,6 +37,13 @@ lexerResults.forEach(token => {
 })
 console.log(colors.green + "[OK] Transpilation complete!" + colors.reset);
 
+console.log(colors.blue + "[*] Running syntax checker & linter..." + colors.reset);
+if(transpiler.runChecks()) {
+	console.log(colors.green + "[OK] Syntax checker finished, no issues found!" + colors.reset);
+} else {
+	console.log(colors.yellow + "[WARN] Syntax checker found at least one issue in your code!" + colors.reset);
+}
+
 if(process.argv[2] === "c") {
 	console.log("Transpiled JS Code (includes stdlib): " + transpiler.getCode());
 } else {
