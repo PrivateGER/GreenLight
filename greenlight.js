@@ -45,7 +45,7 @@ if(transpiler.runChecks()) {
 }
 
 if(process.argv[2] === "c") {
-	console.log("Transpiled JS Code (includes stdlib): " + transpiler.getCode());
+	console.log("Transpiled JS Code (includes stdlib):\n" + transpiler.getCode());
 } else {
 	eval(transpiler.getCode());
 }
