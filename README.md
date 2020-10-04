@@ -2,6 +2,20 @@
 A small scripting language combining syntax of multiple languages I like with a decent standard API. Under active development. 
 This language compiles back into Node.js code.
 
+# Contributing
+Want to help? Thanks! There are multiple areas you can help with.
+
+### Standard Library
+This is currently needed the most. Open lib/stdlib.js and create the function that you think should be part of greenlight. 
+Make sure it is prefixed with `greenlight_internal_` in order to not interfere with user-created functions.
+
+Then, as final step, simply enter lib/implementations/inbuilt_functions.js and add your function to `functionMap` by creating a new key with the name the function should have with the value of the internal name.
+
+Finally, test if your function works, then submit your PR. Thanks! :)
+
+### Transpiler
+Take a look at lib/lexer.js and lib/transpiler.js. The current transpilation solution is slow and not suitable for the long run. Maybe you can help with it!
+
 # Documentation
 
 ### Compile & run
