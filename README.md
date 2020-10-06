@@ -9,7 +9,7 @@ Want to help? Thanks! There are multiple areas you can help with.
 This is currently needed the most. Open lib/stdlib.js and create the function that you think should be part of greenlight. 
 Make sure it is prefixed with `greenlight_internal_` in order to not interfere with user-created functions.
 
-Then simply enter lib/implementations/inbuilt_function.js and add your function to `functionMap` by creating a new key with the name the function should have with the value of the internal name. Finally enter lib/tokens.js and include the function name in `inbuiltFunctionList`.
+Then simply enter lib/implementations/inbuilt_function.js and add your function to `functionMap` by creating a new key with the name the function should have with the value of the internal name.
 
 Finally, test if your function works, then submit your PR. Thanks! :)
 
