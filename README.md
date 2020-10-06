@@ -84,5 +84,5 @@ sqrt(16); // => 4 Get the square root of a number
 isNumber(78); // => true Get a boolean value depending if passed value is a number
 exit(0); // Terminate the program with the passed exit code. 0 = normal, anything else = error
 httpGet("https://example.com/"); // Send a HTTP GET request to the provided URI, returns string with response text
-run("ls"); // Run a system command and receive output after the command has exited. Returns NULL if an error occurs.
+run("ls"); // Run a system command and receive output after the command has exited. Returns STDERR if an error occurs.
 ```
