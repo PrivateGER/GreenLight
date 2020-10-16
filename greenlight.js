@@ -29,7 +29,8 @@ console.log(colors.blue + "[*] Executing lexer..." + colors.reset);
 let lexerResults = lexer.execute(code)
 console.log(colors.green + "[OK] Lexer finished successfully!" + colors.reset);
 
-//console.log(lexerResults);
+// Uncomment to see the AST constructed by the transpiler, maybe the bad regex-based parser messed up if it isn't recognized
+// console.log(lexerResults);
 
 console.log(colors.blue + "[*] Transpiling..." + colors.reset);
 lexerResults.forEach(token => {
