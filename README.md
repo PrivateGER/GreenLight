@@ -85,4 +85,6 @@ isNumber(78); // => true Get a boolean value depending if passed value is a numb
 exit(0); // Terminate the program with the passed exit code. 0 = normal, anything else = error
 httpGet("https://example.com/"); // Send a HTTP GET request to the provided URI, returns string with response text
 run("ls"); // Run a system command and receive output after the command has exited. Returns STDERR if an error occurs.
+sha256("data"); // Hash the provided data with SHA256 and return a hex string 
+sha3("data"); // Hash the provided data with SHA3-256 and return a hex string
 ```
