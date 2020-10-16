@@ -5,3 +5,5 @@ logError("I'm an error.");
 print("---Cryptography---");
 print("The SHA256 hash of 'Hello World' is " + sha256("Hello World") + "!");
 print("The SHA3-256 hash of 'Hello World' is " + sha3("Hello World") + "!");
+
+print("A random number between 50 and 100 is " + randomNumberBetween(50, 100));
