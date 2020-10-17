@@ -87,4 +87,8 @@ httpGet("https://example.com/"); // Send a HTTP GET request to the provided URI,
 run("ls"); // Run a system command and receive output after the command has exited. Returns STDERR if an error occurs.
 sha256("data"); // Hash the provided data with SHA256 and return a hex string 
 sha3("data"); // Hash the provided data with SHA3-256 and return a hex string
+getObjectKeys(object); // Returns an array of the keys of a js object
+getObjectValues(object); // Returns an array of the values of a js object
+objToArray(object); // Returns an array of an object's key:value pairs
+objToJsonString(object); // Converts an object to a JSON string
 ```
