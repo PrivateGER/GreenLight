@@ -1,0 +1,7 @@
+const female_animals = ['Duck', 'Cat','Elephant','Tiger'];
+
+var male_animals = ['Duck', 'Dog','Elephant','Tiger'];
+
+const animals_alone = arrDiffSymmetric(female_animals, male_animals);
+
+print("Animals that do not have a pair are: " + animals_alone);

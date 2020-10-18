@@ -1,0 +1,7 @@
+const fruits = ['Banana', 'Apple', 'Grape', 'Strawberry'];
+
+var fruits_find = ['Strawberry', 'Apple', 'Watermelon'];
+
+const fruits_found = arrIntersect(fruits, fruits_find);
+
+print("The fruits found were: " + fruits_found);

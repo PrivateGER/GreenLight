@@ -1,0 +1,7 @@
+const school_subjects = ['Math', 'Geography','History'];
+
+var approved_school_subjects = ['Geography'];
+
+const pending_subjects = arrDiff(school_subjects, approved_school_subjects);
+
+print("The school subjects that still need approbation are: " + pending_subjects);
