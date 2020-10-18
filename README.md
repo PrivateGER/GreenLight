@@ -88,5 +88,9 @@ httpGet("https://example.com/"); // Send a HTTP GET request to the provided URI,
 run("ls"); // Run a system command and receive output after the command has exited. Returns STDERR if an error occurs.
 sha256("data"); // Hash the provided data with SHA256 and return a hex string 
 sha3("data"); // Hash the provided data with SHA3-256 and return a hex string
+arrMin(array); // Returns the min value in an array
+arrMax(array); // Returns the max value in an array
+arrAvg(array); // Returns the average of all values in an array
+arrSum(array); // Returns the sum of all values in an array
 trueTypeOf(input); // More accurately check the type of an object
 ```
