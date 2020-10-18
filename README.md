@@ -82,6 +82,7 @@ print(object>>key); // Print the value located at the key "key"
 ```
 sqrt(16); // => 4 Get the square root of a number
 isNumber(78); // => true Get a boolean value depending if passed value is a number
+randomNumberBetween(min, max); // Get a random integer between two numbers (inclusive)
 exit(0); // Terminate the program with the passed exit code. 0 = normal, anything else = error
 httpGet("https://example.com/"); // Send a HTTP GET request to the provided URI, returns string with response text
 run("ls"); // Run a system command and receive output after the command has exited. Returns STDERR if an error occurs.
@@ -91,4 +92,5 @@ arrMin(array); // Returns the min value in an array
 arrMax(array); // Returns the max value in an array
 arrAvg(array); // Returns the average of all values in an array
 arrSum(array); // Returns the sum of all values in an array
+trueTypeOf(input); // More accurately check the type of an object
 ```
