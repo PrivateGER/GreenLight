@@ -96,5 +96,8 @@ arrMin(array); // Returns the min value in an array
 arrMax(array); // Returns the max value in an array
 arrAvg(array); // Returns the average of all values in an array
 arrSum(array); // Returns the sum of all values in an array
+arrDiff(array1, array2); // Return the elements from Array 1 that are not in the Array 2
+arrDiffSymmetric(array1, array2); // Return the elements from Array 1 that are not in the Array 2 and vice-versa
+arrIntersect(array1, array2); // Return the elements that both arrays share in common
 trueTypeOf(input); // More accurately check the type of an object
 ```
