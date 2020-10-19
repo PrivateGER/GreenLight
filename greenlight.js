@@ -1,5 +1,5 @@
 let colors = require(__dirname + "/lib/colors");
-console.log(colors.green + "⬤ GreenLight v0.0.1" + colors.reset)
+console.log("//" + colors.green + " ⬤ GreenLight v0.0.1" + colors.reset + "//")
 
 let fs = require("fs");
 let lexer = require(__dirname + "/lib/lexer");
@@ -25,28 +25,28 @@ if(process.argv[3] != null) {
 	process.exit(1);
 }
 
-console.log(colors.blue + "[*] Executing lexer..." + colors.reset);
+if(process.argv[2] !== "c") console.log(colors.blue + "[*] Executing lexer..." + colors.reset);
 let lexerResults = lexer.execute(code)
-console.log(colors.green + "[OK] Lexer finished successfully!" + colors.reset);
+if(process.argv[2] !== "c") console.log(colors.green + "[OK] Lexer finished successfully!" + colors.reset);
 
 // Uncomment to see the AST constructed by the transpiler, maybe the bad regex-based parser messed up if it isn't recognized
 // console.log(lexerResults);
 
-console.log(colors.blue + "[*] Transpiling..." + colors.reset);
+if(process.argv[2] !== "c") console.log(colors.blue + "[*] Transpiling..." + colors.reset);
 lexerResults.forEach(token => {
 	transpiler.transpile(token);
 })
-console.log(colors.green + "[OK] Transpilation complete!" + colors.reset);
+if(process.argv[2] !== "c") console.log(colors.green + "[OK] Transpilation complete!" + colors.reset);
 
-console.log(colors.blue + "[*] Running syntax checker & linter..." + colors.reset);
+if(process.argv[2] !== "c") console.log(colors.blue + "[*] Running syntax checker & linter..." + colors.reset);
 if(transpiler.runChecks()) {
-	console.log(colors.green + "[OK] Syntax checker finished, no issues found!" + colors.reset);
+	if(process.argv[2] !== "c") console.log(colors.green + "[OK] Syntax checker finished, no issues found!" + colors.reset);
 } else {
 	console.log(colors.yellow + "[WARN] Syntax checker found at least one issue in your code!" + colors.reset);
 }
 
 if(process.argv[2] === "c") {
-	console.log("Transpiled JS Code (includes stdlib):\n" + transpiler.getCode());
+	console.log(transpiler.getCode());
 } else {
 	eval(transpiler.getCode());
 }
