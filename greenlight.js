@@ -43,6 +43,7 @@ if(transpiler.runChecks()) {
 	if(process.argv[2] !== "c") console.log(colors.green + "[OK] Syntax checker finished, no issues found!" + colors.reset);
 } else {
 	console.log(colors.yellow + "[WARN] Syntax checker found at least one issue in your code!" + colors.reset);
+	return -1;
 }
 
 if(process.argv[2] === "c") {
