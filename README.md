@@ -81,6 +81,15 @@ print(object>>key); // Print the value located at the key "key"
 ### Standard library
 ```
 sqrt(16); // => 4 Get the square root of a number
+log(1); // => 0 Get the natural logarithm of a number
+pow(2, 10); // => 1024 Raise a number to an arbitrary power
+exp(1); // => 2.718281828459045 Get the exponential of a number
+max(2, 4, 1, 3); // => 4 Get the maximum element of an array
+min(2, 4, 1, 3); // => 1 Get the minimum element of an array
+random(); // Generates a random number between 0 and 1
+sin(0); // => 0 Gives the sine of number
+cos(0); // => 1 Gives the cosine of number
+tan(0); // => 0 Gives the tangent of number
 isNumber(78); // => true Get a boolean value depending if passed value is a number
 randomNumberBetween(min, max); // Get a random integer between two numbers (inclusive)
 exit(0); // Terminate the program with the passed exit code. 0 = normal, anything else = error
