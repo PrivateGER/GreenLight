@@ -62,6 +62,7 @@ var object = {
   ],
   "nestedObject": {
     "nested": "hi!"
+  }
 };
 ```
 Objects in Greenlight work the same as they do in JavaScript.
