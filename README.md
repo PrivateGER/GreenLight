@@ -1,12 +1,12 @@
 # GreenLight
-A small scripting language combining syntax of multiple languages I like with a decent standard API. Under active development. 
+A small scripting language combining syntax of multiple languages I like with a decent standard API. Under active development.
 This language compiles back into Node.js code.
 
 # Contributing
 Want to help? Thanks! There are multiple areas you can help with.
 
 ### Standard Library
-This is currently needed the most. Open lib/stdlib.js and create the function that you think should be part of greenlight. 
+This is currently needed the most. Open lib/stdlib.js and create the function that you think should be part of greenlight.
 Make sure it is prefixed with `greenlight_internal_` in order to not interfere with user-created functions.
 
 Then simply enter lib/implementations/inbuilt_function.js and add your function to `functionMap` by creating a new key with the name the function should have with the value of the internal name.
@@ -38,15 +38,15 @@ input("Name? "); // Print the passed string and read user input until a newline 
 ### Function declarations & calls
 ```
 fun say_hello(name) {
-  print("Hello, " + name); 
+  print("Hello, " + name);
 }
-  
+
 call say_hello("Reader");
 ```
-The function keyword in this language is "fun". 
+The function keyword in this language is "fun".
 Function calls in Greenlight ***need*** to be prefixed with "call", otherwise undefined behavior is likely to occur.
 
-### Variables 
+### Variables
 ```
 var hello = "world"; // Mutable variable
 const constant = "light"; // Constant variable
@@ -91,12 +91,13 @@ random(); // Generates a random number between 0 and 1
 sin(0); // => 0 Gives the sine of number
 cos(0); // => 1 Gives the cosine of number
 tan(0); // => 0 Gives the tangent of number
+abs(-16); // => 16 Get the absolute value of a number
 isNumber(78); // => true Get a boolean value depending if passed value is a number
 randomNumberBetween(min, max); // Get a random integer between two numbers (inclusive)
 exit(0); // Terminate the program with the passed exit code. 0 = normal, anything else = error
 httpGet("https://example.com/"); // Send a HTTP GET request to the provided URI, returns string with response text
 run("ls"); // Run a system command and receive output after the command has exited. Returns STDERR if an error occurs.
-sha256("data"); // Hash the provided data with SHA256 and return a hex string 
+sha256("data"); // Hash the provided data with SHA256 and return a hex string
 sha3("data"); // Hash the provided data with SHA3-256 and return a hex string
 md5("data"); // Hash the provided data with MD5 and return a hex string. Warning: MD5 is outdated and insecure.
 getObjectKeys(object); // Returns an array of the keys of a js object
@@ -111,4 +112,5 @@ arrDiff(array1, array2); // Return the elements from Array 1 that are not in the
 arrDiffSymmetric(array1, array2); // Return the elements from Array 1 that are not in the Array 2 and vice-versa
 arrIntersect(array1, array2); // Return the elements that both arrays share in common
 trueTypeOf(input); // More accurately check the type of an object
+bin(input); // Convert an integer to binary. Negative integers are funky. Explanation here: https://stackoverflow.com/questions/16155592/negative-numbers-to-binary-string-in-javascript
 ```
